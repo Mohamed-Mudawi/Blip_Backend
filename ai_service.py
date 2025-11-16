@@ -1,7 +1,7 @@
 # ai_service.py
 
 from groq import Groq
-from groq.lib.api_client import APIError  # <-- FIX 1: Import Groq's specific error class
+from groq import APIError  # <-- FIX 1: Import Groq's specific error class
 from config import GROQ_API_KEY
 import json
 
