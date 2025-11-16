@@ -31,7 +31,7 @@ Rules:
 def generate_social_post(messy_text: str):
     try:
         response = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",  # UPDATED MODEL
+            model="llama-3.1-8b-instant",  # UPDATED MODEL
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": messy_text}
