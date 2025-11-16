@@ -1,5 +1,6 @@
 from groq import Groq
 from config import GROQ_API_KEY
+import json
 
 client = Groq(api_key=GROQ_API_KEY)
 
@@ -30,4 +31,5 @@ def generate_social_post(messy_text: str):
         response_format={"type": "json_object"}
     )
 
-    return response.choices[0].message.parsed
+    # Parse the JSON string from the response content
+    return json.loads(response.choices[0].message.content)
